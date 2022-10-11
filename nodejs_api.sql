@@ -24,33 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `products`
+-- Cấu trúc bảng cho bảng `song`
 --
 
-CREATE TABLE `products` (
+CREATE TABLE `song` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `color` varchar(255) DEFAULT NULL,
-  `price` decimal(10,0) DEFAULT NULL
+  `lyrics` TEXT DEFAULT NULL,
+  `author` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `products`
+-- Đang đổ dữ liệu cho bảng `song`
 --
 
-INSERT INTO `products` (`id`, `name`, `color`, `price`) VALUES
-(1, 'Iphone X', 'Black', '30000000'),
-(2, 'Samsung S9', 'White', '24000000'),
-(3, 'Oppo F5', 'Red', '7000000');
+INSERT INTO `song` (`id`, `name`, `lyrics`, `author`) VALUES
+(1, 'Celestial', 'You see tonight, it could go either way', 'Ed Sheeran'),
+(2, '28 Reasons', 'I kiss your brother geu mam humcheo', 'SEULGI'),
+(3, 'This Is Why', 'If you have an opinion', 'Paramore');
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Chỉ mục cho bảng `products`
+-- Chỉ mục cho bảng `song`
 --
-ALTER TABLE `products`
+ALTER TABLE `song`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -58,9 +58,9 @@ ALTER TABLE `products`
 --
 
 --
--- AUTO_INCREMENT cho bảng `products`
+-- AUTO_INCREMENT cho bảng `song`
 --
-ALTER TABLE `products`
+ALTER TABLE `song`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
